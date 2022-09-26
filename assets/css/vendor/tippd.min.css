@@ -1,0 +1,164 @@
+body {
+  font-family: sans-serif;
+  background: #002333;
+}
+li {
+  list-style: none;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  min-height: 100vh;
+  background-color: #fff;
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d4c79d;
+
+  width: 100%;
+  margin-bottom: 10px;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+  /* border: 2px solid red; */
+}
+.video-container #main-Video {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  outline: none;
+}
+
+.playlistBx {
+  position: relative;
+  height: 100%;
+  margin: 0 10px 0 10px;
+  /* border: 2px solid green; */
+}
+.playlist {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+  border-top: 1px solid #d4c79d;
+}
+.playlist::-webkit-scrollbar {
+  width: 0px;
+}
+.playlistBx .row .AllLessons {
+  display: block;
+  text-align: left;
+  color: #d4c79d;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 40px;
+  line-height: 40px;
+}
+
+.edu-section-gap {
+  margin-top: -25pc;
+}
+
+@media only screen and (max-width: 767px) {
+  .edu-section-gap {
+    margin-top: -15pc;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .edu-section-gap {
+    margin-top: -13pc;
+  }
+}
+.playlist li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  color: #d4c79d;
+  cursor: pointer;
+  border: 2px solid #000000;
+  padding: 1px 20px;
+  border-radius: 5px;
+}
+.playlist li:hover {
+  border: 2px solid #000000;
+  color: #fff7df;
+  background: #000000;
+}
+.playlist li .row span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #d4c79d;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+}
+.playlist li .row span::before {
+  content: "\f01d";
+  font-family: FontAwesome;
+  color: #d4c79d;
+  margin-right: 15px;
+  font-size: 20px;
+}
+ul li.playing .row span::before {
+  content: "\f28c";
+  font-family: FontAwesome;
+  color: #d4c79d;
+  margin-right: 15px;
+  font-size: 20px;
+}
+.playlist li.playing .row span {
+  color: #d4c79d;
+}
+.playlist li span.duration {
+  font-size: 15px;
+  font-weight: 400;
+  display: inline-block;
+  color: #d4c79d;
+  text-align: right;
+}
+.playlist li.playing {
+  pointer-events: none;
+  background: #000000;
+  border: 0.5px solid #fff7df;
+}
+
+@media (max-width: 1092px) {
+  section {
+    padding: 10px 10px;
+  }
+  .edu-section-gap {
+    margin-top: -14pc;
+  }
+
+  .video-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
+  }
+  .video-container #main-Video {
+    height: 100%;
+  }
+  .playlistBx {
+    height: 380px;
+    margin-top: 10px;
+  }
+  .playlist {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+  }
+}
