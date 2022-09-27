@@ -3044,8 +3044,8 @@ button.edu-btn:after {
   content: "";
   height: 100%;
   width: 0;
-  background: -webkit-linear-gradient(right, ##ff7df 0%, ##ff7df 100%);
-  background: linear-gradient(-90deg, ##ff7df 0%, ##ff7df 100%);
+  background: -webkit-linear-gradient(right, #d4c79d 0%, #d4c79d 100%);
+  background: linear-gradient(-90deg, #d4c79d 0%, #d4c79d 100%);
   border-radius: 5px;
   position: absolute;
   top: 0;
@@ -3175,9 +3175,9 @@ button.edu-btn.btn-border:hover {
   background: -webkit-linear-gradient(
     right,
     #d4c79d 0%,
-    #31b978 100%
+    #d4c79d 100%
   ) !important;
-  background: linear-gradient(-90deg, #d4c79d 0%, #31b978 100%) !important;
+  background: linear-gradient(-90deg, #d4c79d 0%, #d4c79d 100%) !important;
 }
 .wishlist-btn {
   background: rgba(255, 255, 255, 0.15);
